@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="../js/api_helper.js" defer></script>
+  <script src="../js/comments.js" defer></script>
+  <script src="../js/navbar.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="../dist/output.css" rel="stylesheet">
+  <style type="text/tailwindcss"></style>
+  <title>landing page</title>
+
+              
+</head>
+<body>
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="block h-8 w-auto lg:hidden" src="asstes/logosvg.svg" alt="Your Company">
+            <img class="hidden h-8 w-auto lg:block" src="asstes/logosvg.svg" alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <!-- NAVBAR ELEMENTS -->
+            <div class="flex space-x-4" id="navbar-elements"> 
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            
+          <!-- Profile dropdown -->
+          <div class="relative ml-3 flex">
+          
+            <div class="flex items-center space-x-4 m-x-4">
+              <button type="button" id="login-button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign in</button>
+            </div>
+  
+          </button>
+          <div class="flex items-center mx-5">
+            <button type="button" id="logout-or-register-button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Log out </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+  
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+  
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+  
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--hero section -->
+            <div class="px-6 py-12 md:px-12 bg-gray-50 text-gray-800 text-center lg:text-left">
+              <div class="container mx-auto xl:px-32">
+                <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+                  <div class="mt-12 lg:mt-0">
+                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">The best place  <br /><span class="text-blue-600">organize your graduation</span></h1>
+                    
+                  </div>
+                  <div class="mb-12 lg:mb-0">
+                    <img
+                      src="asstes/Home.jpg"
+                      class="w-full rounded-lg shadow-lg"
+                      alt="Fiesta"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+             
+        </div>
+    
+         <!-- card vip-->
+    <div class="w-full mx-auto my-auto max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-300 dark:border-gray-300 drop-shadow-xl">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-950">VIP Plan</h5>
+        <div class="flex items-baseline text-gray-950 dark:text-white">
+            <span class="text-3xl dark:text-gray-950 font-semibold">$</span>
+            <span class="text-5xl dark:text-gray-950 font-extrabold">1200</span>
+            <span class="ml-1 text-xl font-normal text-gray-600 dark:text-gray-950">/Of graduation</span>
+        </div>
+        <!-- List -->
+        <ul role="list" class="space-y-5 my-7">
+            <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-950">Kit anti cruda para todos tus invitados</span>
+            </li>
+            <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-950">Shots de taquila ilimitados</span>
+            </li>
+            <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-950">acceso al set fotografico</span>
+            </li>
+            <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span class="text-base font-normal leading-tight dark:text-gray-950">Trasporte</span>
+            </li>
+            <li class="flex space-x-3">
+               
+        <button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose plan</button>
+    </div>
+
+<p class="m-10 text-3xl font-semibold">Comments</p>
+<div class="px-10 my-10 flex items-center">
+  <img class="w-[3rem] h-[3rem] mx-4 object-cover rounded-full border-2 border-indigo-500" src="asstes/usuario.png">
+  <form id="comment-form" class="w-2/3 ">
+    <label for="chat" class="sr-only">Your message</label>
+    <div class="flex items-center px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-700">
+        <textarea id="chat" rows="1" class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
+        <button onClick="addComment()" class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600">
+            <svg aria-hidden="true" class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+            <span class="sr-only">Send message</span>
+        </button>
+    </div>
+  </form>
+</div>
+  <!--coments -->
+<div id="comments-box">
+
+</div>
+
+
+</body>
+</html>
